@@ -1,0 +1,47 @@
+<mat-toolbar color="primary" class="toolbar-container">
+  <span>Lista Auto e Concessionarie</span>
+</mat-toolbar>
+
+<table mat-table [dataSource]="dataSource" class="table-container"> <!---->
+  <ng-container matColumnDef="targa">
+    <th mat-header-cell *matHeaderCellDef><b>Car Plate</b></th>
+    <td mat-cell *matCellDef="let element"> {{element.targa}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="concessionario">
+    <th mat-header-cell *matHeaderCellDef><b>Dealer ID</b></th>
+    <td mat-cell *matCellDef="let element"> {{element.concessionario}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="marchio">
+    <th mat-header-cell *matHeaderCellDef><b>Brand</b></th>
+    <td mat-cell *matCellDef="let element"> {{element.marchio}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="maxSpeed">
+    <th mat-header-cell *matHeaderCellDef><b>Max Speed</b></th>
+    <td mat-cell *matCellDef="let element"> {{element.maxSpeed}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="cilindrata">
+    <th mat-header-cell *matHeaderCellDef><b>Displacement</b></th>
+    <td mat-cell *matCellDef="let element"> {{element.cilindrata}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="edit">
+    <th mat-header-cell *matHeaderCellDef><b>Edit</b></th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-mini-fab color="primary"><mat-icon>edit</mat-icon></button> <!---->
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="delete">
+    <th mat-header-cell *matHeaderCellDef><b>Delete</b></th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-mini-fab color="warn"><mat-icon>delete</mat-icon></button> <!---->
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
