@@ -11,6 +11,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { PostComponent } from './components/post/post.component';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -28,7 +30,9 @@ import { MatIconModule } from '@angular/material/icon';
         MatToolbarModule,
         MatButtonModule,
         MatIconModule,
-        PostComponent
+        PostComponent,
+        MatDialogModule,
+        HttpClientModule
     ]
 })
 export class AppModule { }
