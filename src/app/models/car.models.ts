@@ -1,7 +1,11 @@
-export type Car = ICar[]
+export interface ICarDealer {
+  dealerId: number
+  listofCars: ICars[]
+}
 
-export interface ICar {
+export interface ICars {
   id: number
+  plate: string
   name: string
   brand: string
   weight: number
@@ -9,3 +13,4 @@ export interface ICar {
   maxSpeed: number
   displacement: number
 }
+
