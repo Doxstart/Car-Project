@@ -13,6 +13,7 @@ import { PostComponent } from './components/post/post.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -32,7 +33,9 @@ import { HttpClientModule } from '@angular/common/http';
         MatIconModule,
         PostComponent,
         MatDialogModule,
-        HttpClientModule
+        HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule
     ]
 })
 export class AppModule { }

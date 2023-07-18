@@ -6,10 +6,22 @@ import { ConnectionService } from 'src/app/services/connection.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit{
-  displayedColumns: string[] = ['CarId', 'Plate', 'Name', 'Brand', 'Speed', 'MaxSpeed', 'Weight', 'Displacement', 'edit', 'delete'];
+export class HomeComponent implements OnInit {
+  displayedColumns: string[] = [
+    'DealerId',
+    'CarId',
+    'Plate',
+    'Name',
+    'Brand',
+    'Speed',
+    'MaxSpeed',
+    'Weight',
+    'Displacement',
+    'edit',
+    'delete',
+  ];
   dataSource: any;
   car: ICarDealer[] = [];
 
@@ -17,12 +29,11 @@ export class HomeComponent implements OnInit{
   ngOnInit(): void {
     this.connServ.getCars().subscribe({
       next: (data: ICarDealer[]) => (
-        this.car = data,
-         console.log(data),
-         this.dataSource = new MatTableDataSource(this.car)
+        (this.car = data),
+        console.log(data),
+        (this.dataSource = new MatTableDataSource(this.car))
       ),
-      error: (err: any) => console.log(err)
+      error: (err: any) => console.log(err),
     });
   }
-
 }
