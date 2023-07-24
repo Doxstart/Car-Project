@@ -16,4 +16,9 @@ export class ConnectionService {
       map((data: ICarDealer[]) => data)
     );
   }
+
+  postCars(record: ICarDealer) {
+    return this.http.post<ICarDealer>(this.API_URL, record);
+  }
+
 }

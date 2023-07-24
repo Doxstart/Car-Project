@@ -1,5 +1,6 @@
 export interface ICarDealer {
   dealerId: number
+  dealerName: string
   listofCars: ICars[]
 }
 

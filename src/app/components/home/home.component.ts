@@ -11,6 +11,7 @@ import { ConnectionService } from 'src/app/services/connection.service';
 export class HomeComponent implements OnInit {
   displayedColumns: string[] = [
     'DealerId',
+    'DealerName',
     'CarId',
     'Plate',
     'Name',
