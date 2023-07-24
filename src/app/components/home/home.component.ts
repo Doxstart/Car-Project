@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
     'weight',
     'displacement'
   ];
-  secondaryDisplayColumns = [...this.secondaryColumns, 'delete', 'edit'];
+  secondaryDisplayColumns = [...this.secondaryColumns, 'edit', 'delete'];
   expandedElement!: ICarDealer | null;
   dataSource!: any;
   car: ICarDealer[] = [];
