@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { ICarDealer } from '../models/car.models';
+import { ICarDealer, ICars } from '../models/car.models';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +19,10 @@ export class ConnectionService {
 
   postCars(record: ICarDealer) {
     return this.http.post<ICarDealer>(this.API_URL, record);
+  }
+
+  deleteCar(id: ICars): Observable<ICars> {
+    return this.http.delete<ICars>(`this.API_URL/${id}`);
   }
 
 }

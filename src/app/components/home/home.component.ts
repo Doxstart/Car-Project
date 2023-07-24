@@ -53,8 +53,12 @@ export class HomeComponent implements OnInit {
     this.cd.detectChanges();
   }
 
-  onDelete(car: ICars) {
-    console.log('Clicked car', car);
+  onDelete(id: ICars) {
+    console.log('Clicked car', id);
+    this.connServ.deleteCar(id).subscribe({
+      next: (res) => { alert('Car Deleted!'); },
+      error: (err) => console.log(err)
+    });
   }
 
 }

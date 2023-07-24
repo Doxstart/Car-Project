@@ -11,6 +11,15 @@ th, td{
   text-align: center;
 }
 
+.btn{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  background-color: rgb(66, 66, 66);
+}
+
 tr.example-detail-row {
   height: 0;
 }
