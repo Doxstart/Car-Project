@@ -3,54 +3,31 @@
   justify-content: center;
 }
 
-.table-container{
+table{
   width: 100%;
 }
 
-.mat-column-DealerId{
-  text-align: center;
+tr.example-detail-row {
+  height: 0;
 }
 
-.mat-column-DealerName{
-  text-align: center;
+tr.example-element-row:not(.example-expanded-row):hover {
+  background: #777;
 }
 
-.mat-column-CarId{
-  text-align: center;
+tr.example-element-row:not(.example-expanded-row):active {
+  background: #efefef;
 }
 
-.mat-column-Name{
-  text-align: center;
+.example-element-row td {
+  border-bottom-width: 0;
 }
 
-.mat-column-Plate{
-  text-align: center;
+.example-element-detail {
+  overflow: hidden;
+  display: flex;
 }
 
-.mat-column-Brand{
-  text-align: center;
-}
-
-.mat-column-MaxSpeed{
-  text-align: center;
-}
-
-.mat-column-Weight{
-  text-align: center;
-}
-
-.mat-column-Speed{
-  text-align: center;
-}
-
-.mat-column-Displacement{
-  text-align: center;
-}
-
-.mat-column-edit{
-  text-align: center;
-}
-
-.mat-column-delete{
-  text-align: center;
+.inner-table {
+  width: 100%;
 }
