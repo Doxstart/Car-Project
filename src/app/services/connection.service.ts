@@ -7,7 +7,7 @@ import { ICarDealer, ICars } from '../models/car.models';
   providedIn: 'root'
 })
 export class ConnectionService {
-  private readonly API_URL = 'https://localhost:44320/api/Concessionario/';
+  private readonly API_URL = 'https://localhost:44320/api/Concessionario';
 
   constructor(private readonly http: HttpClient) { }
   getCars(): Observable<ICarDealer[]> {
