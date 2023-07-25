@@ -1,0 +1,61 @@
+<div class="post-car-dialog-container">
+  <div class="title-container">
+    <h1 mat-dialog-title class="dialog-title">Edit a Car</h1>
+  </div>
+  <div mat-dialog-content>
+    <div class="form-container">
+      <div class="input-container">
+      <!-- <h2 mat-dialog-title>
+          Add a car to:
+      </h2> -->
+        <!-- <mat-form-field>
+          <mat-label>Dealer ID</mat-label>
+          <input matInput [(ngModel)]="dealerID" placeholder="1" name="dealerEdit" required>
+        </mat-form-field> -->
+        <!-- <h2 mat-dialog-title>
+          Edit:
+        </h2> -->
+        <mat-form-field>
+          <mat-label>Car Id</mat-label>
+          <input matInput [(ngModel)]="carObj.id" type="text" name="carIdEdit" placeholder="1"  disabled required>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Car Plate</mat-label>
+          <input matInput [(ngModel)]="carObj.plate" type="text" name="carPlateEdit" placeholder="AA000AA" required>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Car Name</mat-label>
+          <input matInput [(ngModel)]="carObj.name" placeholder="Renegade" name="carNameEdit">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Car Brand</mat-label>
+          <input matInput [(ngModel)]="carObj.brand" placeholder="Jeep" name="carBrandEdit">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Speed</mat-label>
+          <input matInput [(ngModel)]="carObj.speed" placeholder="150 Km/H" name="speedEdit">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Max Speed</mat-label>
+          <input matInput [(ngModel)]="carObj.maxSpeed" placeholder="350 Km/H" name="maxSpeedEdit">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Weight</mat-label>
+          <input matInput [(ngModel)]="carObj.weight" placeholder="250 Kg" name="weightEdit">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Displacement</mat-label>
+          <input matInput [(ngModel)]="carObj.displacement" placeholder="cc" name="displacementEdit">
+        </mat-form-field>
+      </div>
+    </div>
+    <div mat-dialog-actions class="buttons-container" align="end">
+      <span class="button-padding">
+        <button mat-raised-button mat-dialog-close color="warn" (click)="onNo()">Go Back</button>
+      </span>
+      <span class="button-padding">
+        <button mat-raised-button mat-dialog-close cdkFocusInitial color="primary" (click)="onEdit()">Edit</button>
+      </span>
+    </div>
+  </div>
+</div>

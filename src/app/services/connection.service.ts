@@ -17,11 +17,11 @@ export class ConnectionService {
     );
   }
 
-  getDealersById(dealerId: number){
+  getDealersById(dealerId: number) {
     return this.http.get<ICarDealer[]>(`${this.API_URL}/${dealerId}`);
   }
 
-  postDealer(newDealer: ICarDealer){
+  postDealer(newDealer: ICarDealer) {
     return this.http.post(`${this.API_URL}`, newDealer);
   }
 
@@ -29,16 +29,16 @@ export class ConnectionService {
     return this.http.post<ICarDealer>(`${this.API_URL}/${dealerId}`, newCar);
   }
 
-  putDealer(dealerId: number, updatedDealer: ICarDealer){
+  putDealer(dealerId: number, updatedDealer: ICarDealer) {
     return this.http.put(`${this.API_URL}/${dealerId}`, updatedDealer);
   }
 
-  putCar(id: string, updatedCar: ICars){
-    return this.http.put(`${this.API_URL}/${id}`, updatedCar)
+  putCar(id: number, updatedCar: ICars) {
+    return this.http.put(`${this.API_URL}/${id}`, updatedCar);
   }
 
-  deleteCar(id: ICars): Observable<ICars> {
-    return this.http.delete<ICars>(`this.API_URL/${id}`);
+  deleteCar(id: number) {
+    return this.http.delete(`${this.API_URL}/${id}`);
   }
 
 }
