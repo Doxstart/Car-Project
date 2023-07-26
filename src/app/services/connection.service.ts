@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { ICarDealer, ICars } from '../models/car.models';
+import { CarDealer, ICarDealer, ICars } from '../models/car.models';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +18,7 @@ export class ConnectionService {
   }
 
   getDealersById(dealerId: number) {
-    return this.http.get<ICarDealer[]>(`${this.API_URL}/${dealerId}`);
+    return this.http.get<CarDealer[]>(`${this.API_URL}/${dealerId}`);
   }
 
   postDealer(newDealer: ICarDealer) {
@@ -26,7 +26,7 @@ export class ConnectionService {
   }
 
   postCars(dealerId: number, newCar: ICars) {
-    return this.http.post<ICarDealer>(`${this.API_URL}/${dealerId}`, newCar);
+    return this.http.post(`${this.API_URL}/${dealerId}`, newCar);
   }
 
   putDealer(dealerId: number, updatedDealer: ICarDealer) {
