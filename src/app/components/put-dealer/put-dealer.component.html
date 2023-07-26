@@ -10,27 +10,20 @@
         </h2>
         <mat-form-field>
           <mat-label>Dealer Id</mat-label>
-          <input matInput type="text" name="DealerIdEdit" placeholder="1">
-        </mat-form-field>
-        <h2 mat-dialog-title>
-          Edited Record:
-        </h2>
-        <mat-form-field>
-          <mat-label>Car Id</mat-label>
-          <input matInput type="text" name="CarIdEdit" placeholder="1">
+          <input matInput [(ngModel)]="dealerObj.dealerId" type="text" name="DealerIdEdit" placeholder="1" disabled required>
         </mat-form-field>
         <mat-form-field>
-          <mat-label>Car Name</mat-label>
-          <input matInput type="text" name="CarNameEdit" placeholder="Renegade">
+          <mat-label>Dealer Name</mat-label>
+          <input matInput [(ngModel)]="dealerObj.dealerName" type="text" name="DealerNameEdit" placeholder="New Name">
         </mat-form-field>
       </div>
     </div>
     <div mat-dialog-actions class="buttons-container" align="end">
       <span class="button-padding">
-        <button mat-raised-button mat-dialog-close color="warn">Go Back</button>
+        <button mat-raised-button mat-dialog-close color="warn" (click)="onNo()">Go Back</button>
       </span>
       <span class="button-padding">
-        <button mat-raised-button mat-dialog-close cdkFocusInitial color="primary">Edit</button>
+        <button mat-raised-button mat-dialog-close cdkFocusInitial color="primary" (click)="onEdit()">Edit</button>
       </span>
     </div>
   </div>
