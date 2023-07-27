@@ -14,7 +14,6 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FirstUpperPipe } from './pipes/first-upper.pipe';
-import { EditDialogComponent } from './components/edit-dialog/edit-dialog.component';
 
 @NgModule({
     declarations: [

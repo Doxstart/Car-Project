@@ -14,24 +14,27 @@ import { CarDealer, Cars, ICarDealer, ICars } from 'src/app/models/car.models';
     HttpClientModule,
     FormsModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
   ],
   templateUrl: './put-dealer.component.html',
-  styleUrls: ['./put-dealer.component.scss']
+  styleUrls: ['./put-dealer.component.scss'],
 })
 export class PutDealerComponent {
   @Input() dealerObj: ICarDealer = new CarDealer();
   carObj: ICars = new Cars();
 
-  @Output() onEditClick: EventEmitter<{ dealerObj: ICarDealer, carObj: ICars}> = new EventEmitter();
+  @Output() onEditClick: EventEmitter<{
+    dealerObj: ICarDealer;
+    carObj: ICars;
+  }> = new EventEmitter();
   @Output() onNoClick: EventEmitter<any> = new EventEmitter();
 
   // When NO gets clicked, the result returned to the home.component is FALSE
   onNo(): void {
-    this.onNoClick.emit()
+    this.onNoClick.emit();
   }
 
-  onEdit(){
-    this.onEditClick.emit({ dealerObj : this.dealerObj, carObj : this.carObj});
+  onEdit() {
+    this.onEditClick.emit({ dealerObj: this.dealerObj, carObj: this.carObj });
   }
 }
