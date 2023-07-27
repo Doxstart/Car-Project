@@ -21,10 +21,12 @@ export class DeleteDialogComponent {
 
   // When YES gets clicked, the result returned to the home.component is TRUE
   onYesClick(): void {
-    this.connServ.deleteCar(this.data.id).subscribe(() => {
-      this.dialogRef.close(true);
-    }, error => {
-      this.dialogRef.close(false);
-    });
+    //This code does what the delete in homecomponent is already doing,
+    // this.connServ.deleteCar(this.data.id).subscribe(() => {
+    //   this.dialogRef.close(true);
+    // }, error => {
+    //   this.dialogRef.close(false);
+    // });
+    this.dialogRef.close(true);
   }
 }

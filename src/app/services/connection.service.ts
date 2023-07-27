@@ -30,7 +30,7 @@ export class ConnectionService {
   }
 
   putDealer(dealerId: number, updatedDealer: ICarDealer) {
-    return this.http.put(`${this.API_URL}/${dealerId}`, updatedDealer);
+    return this.http.put(`${this.API_URL}?id=${dealerId}`, updatedDealer);
   }
 
   putCar(id: number, updatedCar: ICars) {

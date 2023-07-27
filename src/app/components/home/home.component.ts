@@ -27,6 +27,7 @@ export class HomeComponent implements OnInit {
     'dealerId',
     'dealerName',
   ];
+  displayedColumnswithEdit: string[] = [...this.displayedColumns, 'Edit']
   secondaryColumns: string[] = [
     'id',
     'plate',
@@ -83,12 +84,12 @@ export class HomeComponent implements OnInit {
       width: '1000px',
     });
     dialogRef.componentInstance.onAddClick.subscribe(res => {
-      let newDealer = {dealerId: res.dealerId, dealerName: res.dealerName, carList:[]}
-      this.connServ.postDealer(newDealer).subscribe(() =>{
-        this.getCars();
-        dialogRef.close();
-      }
-    )});
+      let newDealer = {dealerId: res.dealerId, dealerName: res.dealerName, listofCars:[]};
+       this.connServ.postDealer(newDealer).subscribe(() =>{
+         this.getCars();
+         dialogRef.close();
+       }
+     )});
     dialogRef.componentInstance.onNoClick.subscribe(() => {
       console.log('You decided to not add anything');
       dialogRef.close();
@@ -134,7 +135,6 @@ export class HomeComponent implements OnInit {
       listofCars: dealer.listofCars
     });
     dialogRef.componentInstance.onEditClick.subscribe(res =>{
-      console.log(res.dealerObj);
       this.connServ.putDealer(res.dealerObj.dealerId!, res.dealerObj).subscribe(() =>{
         this.getCars();
         dialogRef.close();
@@ -194,6 +194,7 @@ export class HomeComponent implements OnInit {
 
     // When dialog is closed, check the result and, if true, launch the DELETE method
     dialogRef.afterClosed().subscribe(result => {
+      console.log(result);
       if (result) {
         this.connServ.deleteCar(carId).subscribe(() => {
           console.log('Car deleted');
