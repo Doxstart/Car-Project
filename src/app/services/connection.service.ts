@@ -39,4 +39,8 @@ export class ConnectionService {
   deleteCar(id: number) {
     return this.http.delete(`${this.API_URL}/${id}`);
   }
+
+  deleteDealer(dealerId: number){
+    return this.http.delete(`${this.API_URL}/Dealers/${dealerId}`);
+  }
 }

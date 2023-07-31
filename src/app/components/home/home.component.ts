@@ -27,7 +27,7 @@ import { DeleteDialogComponent } from '../delete-dialog/delete-dialog.component'
 })
 export class HomeComponent implements OnInit {
   displayedColumns: string[] = ['dealerId', 'dealerName'];
-  displayedColumnswithEdit: string[] = [...this.displayedColumns, 'Edit'];
+  displayedColumnsWithEditAndDelete: string[] = [...this.displayedColumns, 'Edit', 'Delete'];
   secondaryColumns: string[] = [
     'id',
     'plate',
@@ -192,11 +192,44 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  //DELETE
+  //DELETE DEALERS
+  onDeleteDealer(dealer: ICarDealer) {
+    console.log('Clicked Dealer', dealer);
+    this.openDeleteDealer(dealer.dealerId!);
+  }
+
+  openDeleteDealer(dealerId: number) {
+    // Gets the dealerId attribute as parameter
+    //Dialog Creation
+    const dialogRef = this.dialog.open(DeleteDialogComponent, {
+      width: '300px',
+      data: { id: dealerId },
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log(result);
+      if (result) {
+        this.connServ.deleteDealer(dealerId).subscribe(
+          () => {
+            console.log('Dealer deleted');
+            this.getCars();
+          },
+          (error) => {
+            console.error('Error deleting Dealer', error);
+          }
+        );
+      } else {
+        console.log('No delete performed');
+      }
+    });
+  }
+
+  //DELETE CARS
   onDelete(car: ICars) {
     console.log('Clicked car', car);
     this.openDeleteDialog(car.id!);
   }
+
 
   openDeleteDialog(carId: number): void {
     // Gets the CarId attribute as parameter
@@ -224,4 +257,5 @@ export class HomeComponent implements OnInit {
       }
     });
   }
+
 }
