@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; background-color: rgb(66, 66, 66);}
+@import "primeng/resources/themes/md-dark-indigo/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+html, body { height: 100%; background-color: #1e1e1e;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,18 @@
+.toolbar-container{
+  display: flex;
+  justify-content: center;
+}
+
+.btn{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  background-color: #1e1e1e;
+}
+
+.btn-tab{
+  display: flex;
+  justify-content: space-around;
+}

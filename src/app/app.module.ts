@@ -15,11 +15,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FirstUpperPipe } from './pipes/first-upper.pipe';
 
+import { TableModule } from 'primeng/table';
+import { PrimeTableComponent } from './components/prime-table/prime-table.component';
+import { InplaceModule } from 'primeng/inplace';
+
 @NgModule({
     declarations: [
         AppComponent,
         HomeComponent,
         FirstUpperPipe,
+        PrimeTableComponent,
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -36,6 +41,8 @@ import { FirstUpperPipe } from './pipes/first-upper.pipe';
         HttpClientModule,
         FormsModule,
         ReactiveFormsModule,
+        TableModule,
+        InplaceModule
     ]
 })
 export class AppModule { }
