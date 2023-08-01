@@ -122,8 +122,8 @@
         <td>{{ element.speed }}</td>
         <td>{{ element.maxSpeed }}</td>
         <td>{{ element.displacement }}</td>
-        <td><button mat-raised-button color="primary" (click)="onEditCar(element)"> Edit </button></td>
-        <td><button mat-raised-button color="warn" (click)="onDelete(element)"> Delete </button></td>
+        <td><button mat-mini-fab color="primary" (click)="onEditCar(element)"><mat-icon>edit</mat-icon></button></td>
+        <td><button mat-mini-fab color="warn" (click)="onDelete(element)"><mat-icon>delete</mat-icon></button></td>
       </tr>
     </ng-template>
     <ng-template pTemplate="emptymessage">
