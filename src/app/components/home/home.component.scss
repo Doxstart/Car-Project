@@ -3,17 +3,9 @@
   justify-content: center;
 }
 
-// table{
-//   width: 100%;
-// }
-
-// th, td{
-//   text-align: center;
-// }
-
 .btn{
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
@@ -22,15 +14,23 @@
 
 .x-btn{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 }
 
+.x-btn button:nth-child(1){
+  margin-right: 45px;
+}
+
+// table{
+//   width: 100%;
+// }
+
 // tr.example-detail-row {
-//   height: 0;
+  //   height: 0;
 // }
 
 // tr.example-element-row:not(.example-expanded-row):hover {
-//   background: #777;
+  //   background: #777;
 // }
 
 // tr.example-element-row:not(.example-expanded-row):active {

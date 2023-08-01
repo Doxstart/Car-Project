@@ -225,11 +225,10 @@ export class HomeComponent implements OnInit {
   }
 
   //DELETE CARS
-  onDelete(car: ICars) {
+  onDeleteCar(car: ICars) {
     console.log('Clicked car', car);
     this.openDeleteDialog(car.id!);
   }
-
 
   openDeleteDialog(carId: number): void {
     // Gets the CarId attribute as parameter
