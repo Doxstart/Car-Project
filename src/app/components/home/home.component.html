@@ -1,5 +1,5 @@
 <mat-toolbar color="primary" class="toolbar-container">
-  <span><b>List of Car Dealers and Car Models [CRUD]</b></span>
+  <span><b>List of Car Dealers and Car Models</b></span>
 </mat-toolbar>
 
 <div class="btn">
@@ -72,10 +72,10 @@
 </table> -->
 
 <div class="table-container">
-  <p-table [value]="carDealer" dataKey="dealerId" [tableStyle]="{ 'min-width': '60rem' }">
+  <p-table [value]="carDealer" dataKey="dealerId" responsiveLayout="stack" [breakpoint]="'960px'" [tableStyle]="{ 'min-width': '60rem' }" styleClass="p-datatable-gridlines">
     <ng-template pTemplate="header">
       <tr>
-          <th style="width: 5rem"></th>
+          <th style="width: 5rem">⬇</th>
           <th pFrozenColumn="dealerId"> Dealer ID</th>
           <th pFrozenColumn="dealerName"> Dealer Name</th>
           <th pFrozenColumn="actions">Actions</th>
@@ -89,8 +89,12 @@
           </td>
           <td>{{ element.dealerId }}</td>
           <td>{{ element.dealerName }}</td>
-          <td><button mat-mini-fab color="primary" (click)="onEditDealer(element)"><mat-icon>edit</mat-icon></button>
-          <button mat-mini-fab color="warn" (click)="onDeleteDealer(element)"><mat-icon>delete</mat-icon></button></td>
+          <td>
+            <div class="x-btn">
+          <button mat-mini-fab color="primary" (click)="onEditDealer(element)"><mat-icon>edit</mat-icon></button>
+          <button mat-mini-fab color="warn" (click)="onDeleteDealer(element)"><mat-icon>delete</mat-icon></button>
+            </div>
+          </td>
       </tr>
     </ng-template>
 

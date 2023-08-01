@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FirstUpperPipe } from './pipes/first-upper.pipe';
 
+//PRIMENG IMPORTS
 import { TableModule } from 'primeng/table';
 import { PrimeTableComponent } from './components/prime-table/prime-table.component';
 import { InplaceModule } from 'primeng/inplace';
