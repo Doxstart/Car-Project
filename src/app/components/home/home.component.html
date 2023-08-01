@@ -44,14 +44,14 @@
             <p-table [value]="car.listofCars" dataKey="id">
               <ng-template pTemplate="header">
       <tr>
-        <th pFrozenColumn="id">Car Id</th>
-        <th pFrozenColumn="plate">Car Plate</th>
-        <th pFrozenColumn="name">Car Name</th>
-        <th pFrozenColumn="brand">Car Brand</th>
-        <th pFrozenColumn="weight">Car Weight</th>
-        <th pFrozenColumn="speed">Car Speed</th>
-        <th pFrozenColumn="maxSpeed">Car MaxSpeed</th>
-        <th pFrozenColumn="displacement">Car Displacement</th>
+        <th pFrozenColumn="id"><b>Car Id</b></th>
+        <th pFrozenColumn="plate"><b>Car Plate</b></th>
+        <th pFrozenColumn="name"><b>Car Name</b></th>
+        <th pFrozenColumn="brand"><b>Car Brand</b></th>
+        <th pFrozenColumn="weight"><b>Car Weight</b></th>
+        <th pFrozenColumn="speed"><b>Car Speed</b></th>
+        <th pFrozenColumn="maxSpeed"><b>Car MaxSpeed</b></th>
+        <th pFrozenColumn="displacement"><b>Car Displacement</b></th>
         <th style="width: 4rem"></th>
       </tr>
     </ng-template>
@@ -61,10 +61,10 @@
         <td>{{ element.plate }}</td>
         <td>{{ element.name }}</td>
         <td>{{ element.brand }}</td>
-        <td>{{ element.weight }}</td>
-        <td>{{ element.speed }}</td>
-        <td>{{ element.maxSpeed }}</td>
-        <td>{{ element.displacement }}</td>
+        <td>{{ element.weight }} Kg</td>
+        <td>{{ element.speed }} Km/H</td>
+        <td>{{ element.maxSpeed }} Km/H</td>
+        <td>{{ element.displacement }} cc</td>
         <td><button mat-mini-fab color="primary" (click)="onEditCar(element)"><mat-icon>edit</mat-icon></button></td>
         <td><button mat-mini-fab color="warn" (click)="onDeleteCar(element)"><mat-icon>delete</mat-icon></button></td>
       </tr>
