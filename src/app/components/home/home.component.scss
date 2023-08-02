@@ -14,11 +14,15 @@
 
 .x-btn{
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-evenly;
 }
 
-.x-btn button:nth-child(1){
-  margin-right: 45px;
+p-table td, tr{
+  text-align: center;
+}
+
+p-table th{
+  text-align: center;
 }
 
 // table{
