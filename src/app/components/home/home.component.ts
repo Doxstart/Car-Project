@@ -88,7 +88,7 @@ export class HomeComponent implements OnInit {
   openPostDealerDialog() {
     //Dialog Creation
     const dialogRef = this.dialog.open(PostDealerComponent, {
-      width: '1000px',
+      width: '300px',
     });
     dialogRef.componentInstance.onAddClick.subscribe((res) => {
       let newDealer = {
@@ -114,7 +114,7 @@ export class HomeComponent implements OnInit {
   openPostCarDialog() {
     //Dialog Creation
     const dialogRef = this.dialog.open(PostCarComponent, {
-      width: '1000px',
+      width: '1000px'
     });
     // Event management
     dialogRef.componentInstance.onAddClick.subscribe((res) => {
@@ -137,7 +137,7 @@ export class HomeComponent implements OnInit {
   openEditDealerDialog(dealer: ICarDealer) {
     //Dialog Creation
     const dialogRef = this.dialog.open(PutDealerComponent, {
-      width: '1000px',
+      width: '300px',
     });
     // Event management
     dialogRef.componentInstance.dealerObj = new CarDealer({
